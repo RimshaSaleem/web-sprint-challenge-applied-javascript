@@ -65,7 +65,23 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+Ans(DOM)The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree.
+The DOM is designed to be used with any programming language.
 2. What is an event?
+DOM Events are a signal that something has occurred, or is occurring.
+DOM events traverse the document in the bubble and capture phase. The order the event traverses the parent chain is determined before any event handlers are fired. This means that changing the elements within an event handler won't affect which elements get their event handlers called.
+
 3. What is an event listener?
+An event listener is a procedure in JavaScript that waits for an event to occur. The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
+
 4. Why would we convert a NodeList into an Array?
+/ This is nodeList
+        const nodeList = document.querySelectorAll('p');
+        console.log(nodeList);
+  
+        // Converting using Array.prototype.slice.call
+        const array1 = Array.prototype.slice.call(nodeList);
+        console.log(array1);
+
 5. What is a component?
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components
