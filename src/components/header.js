@@ -11,8 +11,11 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
+  const main_header= document.createElement('div')
+  const date_newspaper = document.createElement('span')
+  const h1_header = document.createElement('h1')
+  const temperature = document.createElement('span')
 }
-
 const headerAppender = (selector) => {
   // TASK 2
   // ---------------------
