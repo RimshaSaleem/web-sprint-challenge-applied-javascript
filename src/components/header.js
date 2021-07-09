@@ -21,6 +21,11 @@ const Header = (title, date, temp) => {
   date_newspaper.classList.add('date')
   temperature.classList.add('temp')
 
+  // appending child into main_header
+  main_header.appendChild(date_newspaper)
+  main_header.appendChild(temperature)
+  main_header.appendChild(h1_header)
+
 }
 const headerAppender = (selector) => {
   // TASK 2
