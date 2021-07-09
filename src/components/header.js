@@ -26,6 +26,11 @@ const Header = (title, date, temp) => {
   main_header.appendChild(temperature)
   main_header.appendChild(h1_header)
 
+  date_newspaper.textContent = `Date : ${date}`
+  h1_header.textContent = title
+  temperature.textContent = `Temperature : ${temperature}`
+ 
+  return main_header;
 }
 const headerAppender = (selector) => {
   // TASK 2
