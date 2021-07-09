@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -13,7 +15,20 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-}
+  const main_tab = document.createElement('div')
+//    adding classlist in topic which we passed in     as argument
+  main_tab.classList.add('topics')
+
+  topics.forEach(topic => {
+    let result_tab = document.createElement('div');
+    result_tab.classList.add('tab')
+    result_tab.textContent = topic
+    main_tab.appendChild(result_tab)
+
+
+  });
+  return main_tab;
+ }
 
 const tabsAppender = (selector) => {
   // TASK 4
@@ -23,6 +38,17 @@ const tabsAppender = (selector) => {
   // Find the array of topics inside the response, and create the tabs using the Tabs component.
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
-}
+  let task4_result = document.querySelector(selector)
+ 
+  axios.get('http://localhost:5000/api/topics')
+  .then(responsive => {
+    let final_result = Tabs(responsive.data.topics)
+    task4_result.appendChild(final_result)
+  })
+  .catch(res =>
+    console.log(`ERROR FILE NOT FOUND:`,res))
+  // })
+  }
 
-export { Tabs, tabsAppender }
+ export { Tabs, tabsAppender }
+
