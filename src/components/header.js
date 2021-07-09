@@ -15,6 +15,12 @@ const Header = (title, date, temp) => {
   const date_newspaper = document.createElement('span')
   const h1_header = document.createElement('h1')
   const temperature = document.createElement('span')
+ 
+  // adding classes which passed in argument
+  main_header.classList.add('header')
+  date_newspaper.classList.add('date')
+  temperature.classList.add('temp')
+
 }
 const headerAppender = (selector) => {
   // TASK 2
